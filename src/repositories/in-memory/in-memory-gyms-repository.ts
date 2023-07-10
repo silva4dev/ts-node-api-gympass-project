@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto'
 export class InMemoryGymsRepository implements GymsRepository {
   public items: Gym[] = []
 
-  async findById(id: string): Promise<Gym | null> {
+  async findById(id: string) {
     const gym = this.items.find((item) => item.id === id)
 
     if (!gym) {
@@ -15,7 +15,7 @@ export class InMemoryGymsRepository implements GymsRepository {
     return gym
   }
 
-  async create(data: Prisma.GymCreateInput): Promise<Gym> {
+  async create(data: Prisma.GymCreateInput) {
     const gym = {
       id: data.id ?? randomUUID(),
       title: data.title,
