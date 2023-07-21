@@ -1,4 +1,3 @@
-// Definições de tipos
 import '@fastify/jwt'
 
 declare module '@fastify/jwt' {
