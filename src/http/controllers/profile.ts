@@ -8,5 +8,10 @@ export async function profile(request: FastifyRequest, reply: FastifyReply) {
     userId: request.user.sub,
   })
 
-  return reply.status(200).send({ ...user, password_hash: undefined })
+  return reply.status(200).send({
+    user: {
+      ...user,
+      password_hash: undefined,
+    },
+  })
 }
