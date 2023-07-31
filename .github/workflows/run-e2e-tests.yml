@@ -13,9 +13,9 @@ jobs:
         ports:
           - 5433:5432
         env:
-          - POSTGRESQL_USERNAME=docker
-          - POSTGRESQL_PASSWORD=docker
-          - POSTGRESQL_DATABASE=apisolid
+          POSTGRESQL_USERNAME: docker
+          POSTGRESQL_PASSWORD: docker
+          POSTGRESQL_DATABASE: apisolid
 
     steps:
       - name: Install pnpm
