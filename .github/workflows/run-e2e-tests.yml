@@ -30,6 +30,8 @@ jobs:
 
       - run: pnpm install
 
+      - run: npx prisma generate
+
       - run: pnpm run test:e2e
         env:
           JWT_SECRET: secret
