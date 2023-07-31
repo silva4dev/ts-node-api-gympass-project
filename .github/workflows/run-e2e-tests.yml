@@ -30,9 +30,9 @@ jobs:
 
       - run: pnpm install
 
-      - run: npx prisma generate
+      - run: pnpm prisma generate
 
       - run: pnpm run test:e2e
         env:
-          JWT_SECRET: secret
+          JWT_SECRET: pe0qwoeq09eiqdjaiosdjaosdaposdka09qweuqjdasdmasdl9qiweq0aksda
           DATABASE_URL: "postgresql://docker:docker@localhost:5433/apisolid?schema=public"
