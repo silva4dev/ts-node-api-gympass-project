@@ -9,13 +9,13 @@ jobs:
 
     services:
       postgres:
-      image: bitnami/postgresql
-      ports:
-        - 5433:5432
-      environment:
-        - POSTGRESQL_USERNAME=docker
-        - POSTGRESQL_PASSWORD=docker
-        - POSTGRESQL_DATABASE=apisolid
+        image: bitnami/postgresql
+        ports:
+          - 5433:5432
+        env:
+          - POSTGRESQL_USERNAME=docker
+          - POSTGRESQL_PASSWORD=docker
+          - POSTGRESQL_DATABASE=apisolid
 
     steps:
       - name: Install pnpm
